@@ -1,0 +1,235 @@
+@import "sidebar";
+@import "main-part-1";
+@import "button-brend";
+@import "device";
+@import "prices";
+@import "fonts";
+@import "header__bth";
+@import "footer";
+@import "prices-slider";
+@import "modal-feedback";
+@import "modal-call";
+@import "modal-burger";
+
+body{
+    margin: 0;
+    background-color: $colorgrey;
+    font-family: 'TTLakes Regular';
+    font-size: 14px;
+}
+.wrapper {
+    margin: 0 auto;
+}
+.container {
+    margin-left: 306px;
+}
+.swiper-pagination-1,
+.swiper-pagination-2,
+.swiper-pagination-3 {
+    text-align: center;
+}
+
+@media (max-width:1360px) {
+
+    .container {
+        margin:0 auto;
+    }
+    .main__inner.icon {
+        display: none;
+    }
+    .mobile-swiper {
+        display: none;
+     }
+     .button-brend__bth,
+     .button-section__bth {
+        margin-right: 22px;
+     }
+}
+
+@media (max-width:1100px) {
+  .header__bth {
+      padding: 0;
+  }
+  .main__path {
+  padding-left: 24px;
+
+  & h1::before {
+    left: -25px;
+  }
+
+}
+.button-brend__bth,
+.button-section__bth {
+    width: 224px;
+    margin-right: 16px;
+}
+.mobile-swiper {
+    display: none;
+ }
+
+ .main__banner-img {
+    width: 360px;
+    height: 208px;
+}
+}
+@media (max-width:950px) {
+    .main__content {
+         .main__text {
+            width: auto;
+         }
+     }
+    .button-brend__bth {
+        &.bth--7-hidden,
+        &.bth--8-hidden {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .button-brend__bth,
+    .button-section__bth {
+        width: 214px;
+        margin-right: 14px;
+    }
+    .header__bth {
+        & .icon-3 {
+            margin-right: 0;
+        }
+        & .icon-2, .icon-4, .icon-5, .icon-6 {
+            display: none;
+        }
+    }
+    .mobile-swiper {
+        display: none;
+     }
+     .main__banner-img {
+         width: 100%;
+         height: 100%;
+     }
+     .main__content {
+        flex-direction: column;
+         .main__text {
+            width: auto;
+         }
+     }
+}
+
+@media (max-width:500px) {
+    .header__bth {
+        & .icon-3 {
+            margin-right: 0;
+        }
+        & .icon-2, .icon-4, .icon-5, .icon-6 {
+            display: none;
+        }
+    }
+    .mobile-swiper {
+        display: block;
+        margin-left: 16px;
+     }
+     .swiper-container-1,
+     .swiper-container-2,
+     .swiper-container-3 {
+         overflow-x: hidden;
+     }
+
+     .section-brend, .section-device,
+     .section-prices{
+         display: none;
+     }
+     .main__banner-img {
+        width: 100%;
+        height: 100%;
+    }
+    .main__content {
+        flex-direction: column;
+        & .main__text {
+            width: auto;
+            padding-right: 16px;
+        }
+    }
+    .main__path {
+        .main__inner {
+            margin-top: 24px;
+        }
+    }
+    .main__menu {
+        margin:0;
+    }
+    .main__text {
+        .text-2 {
+            display: none;
+        }
+    }
+    .footer {
+        padding-left: 16px;
+        .footer__text {
+            width: fit-content;
+        }
+        .footer__info {
+            flex-direction: column;
+            text-align: center;
+            .footer__ofert {
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+   .feedback__form {
+       padding: 24px 16px;
+       .form__exit {
+           position:static;
+       }
+   }
+   .call__content {
+       padding: 24px 16px ;
+       .call__exit {
+        position:static;
+    }
+   }
+   .modal__burger .sidebar {
+       border-right:none;
+   }
+   .sidebar__header {
+       .sidebar__logo {
+        padding: 18px 0 0 19px;
+        margin: 0;
+       }
+   }
+   .sidebar {
+   .sidebar__phone {
+       margin-bottom: 0;
+   }
+   .sidebar__list {
+    line-height: 45px;
+    margin:0;
+   }
+}
+}
+@media (max-width:320px) {
+    .main__text {
+        .text-2 {
+            display: none;
+        }
+    }
+    .swiper-container-3 {
+        & .price-section {
+          width: 220px;
+        }
+    }
+}
+
+@media (min-width:1359px) {
+    .header__bth {
+        display: none;
+    }
+    .mobile-swiper {
+        display: none;
+     }
+     .sidebar {
+        transform: translateX(0);
+        opacity: 1;
+        box-shadow: none;
+     }
+}

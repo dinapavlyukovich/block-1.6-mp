@@ -1,0 +1,122 @@
+$colorgrey: #F8F8F8;
+$colorbuttonturquase: #B8FFEC;
+$colordeepgrey: #7E7E82;
+
+.main__path {
+    background-color:$colorgrey;
+    padding-left: 34px;
+    .main__inner {
+        font-size: 28px;
+        flex-wrap: nowrap;
+        display: flex;
+        margin-top: 42px;
+        font-family: 'TT Lakes Bold';
+        position: relative;
+    }
+    h1::before {
+        content:url('../img/highlight.png');
+        position: absolute;
+        left: -30px;
+    }
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        & span {
+            padding-top: 10px;
+            font-family: 'TT Lakes Medium';
+        }
+          a {
+              width: 40px;
+              height: 40px;
+              border-radius:50%;
+              background-color: $colorpink;
+              display: flex;
+              align-items:center;
+              justify-content: center;
+              margin-left: 8px;
+          }
+          a:hover {
+            transform: scale(1.2);
+            background-color: $colordeepgrey;
+           }
+    }
+    .main__inner-icon-1,
+    .main__inner-icon-2 {
+        display: flex;
+        font-size: 16px;
+        margin-right: 32px;
+    }
+    .main__menu {
+        list-style: none;
+        display:flex;
+        white-space: nowrap;
+        padding-left: 0;
+        list-style: none;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        .menu__link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 16px;
+            font-size: 16px;
+            color: #7E7E82;
+            height: 40px;
+            text-decoration: none;
+            border: 2px solid transparent;
+            &:hover {
+                border: 2px solid $colorbuttonturquase;
+                border-radius: 6px;
+                background: $colorwhite;
+                height: 40px;
+            }
+    }
+}
+  }
+  .main__content {
+    display: flex;
+    margin: 0 auto;
+
+    .main__text {
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        margin-bottom: 16px;
+        margin-top: 20px;
+        height: auto;
+        width: 490px;
+        padding-right: 60px;
+          details {
+               position: relative;
+            summary {
+                font-family: 'TT Lakes Medium';
+                list-style: none;
+                cursor:pointer;
+                 &::before {
+                     content:url('../img/expand.png');
+                     position: relative;
+                     top: 6px;
+                 }
+                 &::after {
+                     content:attr(data-close);
+                 }
+            }
+          }
+          details[open] summary::before {
+              content:url('../img/iconup.png');
+          }
+          details[open] summary::after {
+            content:attr(data-open);
+          }
+          details[open] summary {
+          position: absolute;
+          bottom: -30px;
+        }
+    }
+    .main__banner {
+        display: flex;
+        position: relative;
+        margin-top: 15px;
+        max-width: 531px;
+        max-height: 307px;
+    }
+  }

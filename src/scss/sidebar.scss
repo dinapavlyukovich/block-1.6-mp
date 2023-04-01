@@ -1,0 +1,119 @@
+$colorblack : #1B1C21;
+$colorwhite: #FFFFFF;
+$colorpink: #FF3E79;
+$colorgrey: #7E7E82;
+
+.sidebar {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     position: fixed;
+     background-color: $colorwhite;
+     min-width: 306px;
+     height: calc(var(--vh, 1vh) * 100);
+     transform: translateX(-500%);
+     transition: transform 0.5s, opacity 1s, visibility 0.5s ease-in-out;
+     overflow: auto;
+        &__header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .sidebar__logo {
+                padding: 30px 0 0 19px;
+                margin-bottom: 20px;
+            }
+            .sidebar__icon {
+                background: $colorpink;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items:center;
+                justify-content: center;
+                margin-right: 31px;
+                cursor: pointer;
+                margin-top: 15px;
+            }
+            .sidebar__icon:hover {
+                transform: scale(1.2);
+                background-color: $colorgrey;
+            }
+        }
+
+     .sidebar__list {
+         list-style: none;
+         line-height: 50px;
+         padding-left: 24px;
+         font-size: 16px;
+         > li a {
+             letter-spacing: -0.2px;
+             text-decoration: none;
+             color: $colorblack;
+             position: relative;
+         }
+         & a::before {
+             content:url('../img/highlight');
+             position: absolute;
+             top:-5px;
+             left:-25px;
+             display: none;
+         }
+         & a:hover::before {
+             display: block;
+         }
+         & a:hover {
+             color: $colorgrey ;
+         }
+     }
+     .sidebar__contact {
+         .icon {
+             display:flex;
+             list-style: none;
+             justify-content: flex-start;
+             padding: 0;
+             margin-left: 20px;
+             li:hover {
+                transform: scale(1.2);
+                background-color: $colorgrey;
+             }
+         }
+         .icon-1, .icon-2, .icon-3{
+         background: $colorpink;
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         display: flex;
+         align-items:center;
+         justify-content: center;
+         margin-top: 5px;
+         margin-right: 16px;
+         }
+     }
+     .sidebar__adress {
+         margin-left: 19px;
+         margin-bottom:12.4px;
+     }
+     .sidebar__phone {
+        margin-left: 19px;
+        font-size: 24px;
+        margin-bottom: 41px;
+        font-family: "TT Lakes Bold";
+        letter-spacing: -0.6px;
+        line-height: 32px;
+     }
+     .sidebar__lang {
+         display: flex;
+         padding-left: 15px;
+     }
+      li {
+         list-style: none;
+         :hover {
+             color: $colorgrey;
+         }
+     } button {
+         border: none;
+         background-color: $colorwhite;
+         cursor:pointer;
+     }
+ }

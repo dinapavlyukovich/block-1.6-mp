@@ -1,0 +1,54 @@
+.section-prices {
+    margin-left: 32px;
+    margin-top: 50px;
+}
+.prices-container__table {
+    background-color:$colorwhite;
+    border-collapse: collapse;
+    border-radius: 6px;
+    margin-top: 16px;
+    width: 95%;
+    :last-child {
+        border-bottom: none;
+    }
+    & .table-row-1 {
+        text-align: left;
+        background-color: $colorgrey;
+        color: $colorgreyheader;
+        & th {
+            padding-left: 23px;
+            padding-bottom: 16px;
+        }
+    }
+}
+.table-row {
+    border-bottom: 1px solid $colorborderbutton;
+    & td {
+        padding: 23px;
+    }
+}
+.table-bth {
+    color: $colorwhite;
+    background-color: $colorpink;
+    border-radius: 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 24px;
+    font-weight: bold;
+    letter-spacing: -0.15px;
+    border:none;
+    cursor: pointer;
+    white-space: nowrap;
+    &:hover {
+        transform: scale(1.2);
+        background-color: $colordeepgrey;
+    }
+     & span::after {
+         content:url('../img/dropdownbth.png');
+         vertical-align: middle;
+         padding-left: 10px;
+     }
+    span {
+        padding: 12px;
+    }
+}

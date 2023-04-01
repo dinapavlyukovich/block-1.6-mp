@@ -1,0 +1,28 @@
+.section-device {
+    margin-left: 32px;
+}
+.button-section {
+    display: flex;
+    flex-wrap: wrap;
+    &__bth {
+        width: 240px;
+        height: 160px;
+        background-color:$colorwhite;
+        border-radius: 6px;
+        border: 1px solid $colorborderbutton;
+        margin-right: 32px;
+        position: relative;
+        margin-bottom: 20px;
+        cursor: pointer;
+        span {
+           position: absolute;
+           top: 16px;
+           left: 16px;
+        }
+        img {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+        }
+    }
+}

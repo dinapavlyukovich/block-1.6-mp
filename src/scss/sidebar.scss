@@ -13,7 +13,7 @@ $colorgrey: #7E7E82;
      height: calc(var(--vh, 1vh) * 100);
      transform: translateX(-500%);
      transition: transform 0.5s, opacity 1s, visibility 0.5s ease-in-out;
-     overflow: auto;
+     overflow: hidden;
         &__header{
             display: flex;
             flex-direction: row;
@@ -31,9 +31,10 @@ $colorgrey: #7E7E82;
                 display: flex;
                 align-items:center;
                 justify-content: center;
-                margin-right: 31px;
+                margin-right: 16px;
                 cursor: pointer;
                 margin-top: 15px;
+                padding-left:0;
             }
             .sidebar__icon:hover {
                 transform: scale(1.2);
@@ -46,6 +47,7 @@ $colorgrey: #7E7E82;
          line-height: 50px;
          padding-left: 24px;
          font-size: 16px;
+         font-weight: 600;
          > li a {
              letter-spacing: -0.2px;
              text-decoration: none;
@@ -53,7 +55,7 @@ $colorgrey: #7E7E82;
              position: relative;
          }
          & a::before {
-             content:url('../img/highlight');
+             content:url('../img/highlight.svg');
              position: absolute;
              top:-5px;
              left:-25px;
@@ -64,6 +66,7 @@ $colorgrey: #7E7E82;
          }
          & a:hover {
              color: $colorgrey ;
+             font-weight: 500;
          }
      }
      .sidebar__contact {
@@ -73,16 +76,15 @@ $colorgrey: #7E7E82;
              justify-content: flex-start;
              padding: 0;
              margin-left: 20px;
+
              li:hover {
-                transform: scale(1.2);
-                background-color: $colorgrey;
+                transform: scale(1.1);
              }
          }
+
          .icon-1, .icon-2, .icon-3{
-         background: $colorpink;
          width: 40px;
          height: 40px;
-         border-radius: 50%;
          display: flex;
          align-items:center;
          justify-content: center;
@@ -93,12 +95,13 @@ $colorgrey: #7E7E82;
      .sidebar__adress {
          margin-left: 19px;
          margin-bottom:12.4px;
+         font-weight: 700;
      }
      .sidebar__phone {
         margin-left: 19px;
         font-size: 24px;
         margin-bottom: 41px;
-        font-family: "TT Lakes Bold";
+        font-family: "TTLakes Bold";
         letter-spacing: -0.6px;
         line-height: 32px;
      }
@@ -106,10 +109,14 @@ $colorgrey: #7E7E82;
          display: flex;
          padding-left: 15px;
      }
+
+     .sidebar__lang .lang-ru button{
+        color:$colorgrey;
+    }
       li {
          list-style: none;
          :hover {
-             color: $colorgrey;
+         color: $colorgrey;
          }
      } button {
          border: none;

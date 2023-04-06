@@ -10,8 +10,9 @@
             color: $colorblack;
             font-weight: bold;
              &::after {
-                 content:url('../img/more.png');
+                 content:url('../img/dropdown.svg');
                  vertical-align: middle;
+                 margin-left: 5px;
              }
         }
     }

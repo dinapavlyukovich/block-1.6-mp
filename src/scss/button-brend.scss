@@ -22,7 +22,7 @@ $colorborderbutton: #EAEAEA;
     background: linear-gradient(to right, $colorgrey 0%, $colorwhite 98.61%);
     border-top: 1px solid $colorturquoise;
  }
-.button-brend__bth {
+.button-brend__btn {
     display: inline-flex;
     width: 240px;
     height: 72px;
@@ -47,29 +47,30 @@ $colorborderbutton: #EAEAEA;
  .button-brend__active {
     position: relative;
     summary {
-      font-family: 'TT Lakes Medium';
+      font-family: 'TTLakes Medium';
       list-style: none;
       cursor:pointer;
       &::before {
-          content:url('../img/expand.png');
+          content:url('../img/icon.svg');
           position: relative;
-          top: 6px;
+          top: 2px;
+          margin-right: 10px;
       }
       &::after {
           content:attr(data-close);
       }
     }
 
-    & .bth--7, .bth--8 {
+    & .btn--7, .btn--8 {
        display: none;
     }
  }
  details[open] summary::before {
-   content:url(''); /*icon*/
+   content:url('../img/expand.svg');
  }
  details[open] summary::after {
-   content:attr(data-open);
- }
+   content:attr(data-open); }
+
  details[open] summary {
    position: absolute;
    bottom: -10px;

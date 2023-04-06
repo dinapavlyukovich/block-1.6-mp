@@ -27,7 +27,7 @@
         padding: 23px;
     }
 }
-.table-bth {
+.table-btn {
     color: $colorwhite;
     background-color: $colorpink;
     border-radius: 16px;
@@ -41,10 +41,10 @@
     white-space: nowrap;
     &:hover {
         transform: scale(1.2);
-        background-color: $colordeepgrey;
+        /*background-color: $colorgrey;*/
     }
      & span::after {
-         content:url('../img/dropdownbth.png');
+         content:url('../img/white-dropdown.svg');
          vertical-align: middle;
          padding-left: 10px;
      }
